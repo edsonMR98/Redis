@@ -17,7 +17,7 @@ r.rpush('eventsNotPersisted', str({"question": 2, "prop": 2, "user": 2}))
 r.rpush('eventsNotPersisted', str({'question': 3, 'prop': 3, 'user': 3}))
 
 print("List len:", r.llen('eventsNotPersisted'))
-for event in range(0, r.llen('eventsNotPersisted')):
+for _ in range(0, r.llen('eventsNotPersisted')):
     e = r.lpop('eventsNotPersisted')
     eStr = e.decode('ASCII')
     eDict = json.loads(e.decode('ASCII').replace("'", '"'))
