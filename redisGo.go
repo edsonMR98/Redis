@@ -1,6 +1,8 @@
 package main
 
 import (
+	"fmt"
+
 	"github.com/go-redis/redis"
 )
 
@@ -10,4 +12,15 @@ func main() {
 		Password: "", // no password set
 		DB:       0,  // use default DB
 	})
+
+	err := client.Set("edson", "test", 0).Err()
+	if err != nil {
+		panic(err)
+	}
+
+	e, err := client.Get("edson").Result()
+	if err != nil {
+		panic(err)
+	}
+	fmt.Println("edson:", e)
 }
