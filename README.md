@@ -1,10 +1,14 @@
-# RedisPy
+# Redis
 
 [Redis](https://redis.io/) is an open source (BSD licensed), in-memory data structure store, used as a database, cache and message broker.
 
-This script was developed in order to test the redis-py package. This package is the Python interface to the Redis key-value store.
+This script was developed in order to test the redis package.
 
-## Installing
+## Python
+
+redis-py is the Python interface to the Redis key-value store.
+
+### Installing
 
 - To run this script is needed to install the [redis-py](https://pypi.org/project/redis/) package.
 - A running Redis server is required. See [Redis’s quickstart](https://redis.io/topics/quickstart) for installation instructions.
